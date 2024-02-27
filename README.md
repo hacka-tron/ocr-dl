@@ -20,5 +20,7 @@ The app has numerous helpful features like:
 * ~~Created all pages and add routing between them.~~
 * ~~Added form for manually entering licenses.~~
 * ~~Added persistence and context to allow for storing data and moving it between components.~~
+* Add proper form submissions routing.
+* Add screen to ask users whether scanned id looks correct, whether to add mroe ids or whether to go to view.
 * Add view page to view licenses in a card and grid like manner.
 * Added scan page to take license images and process them with tesseract js. 
