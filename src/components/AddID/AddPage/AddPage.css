@@ -1,0 +1,15 @@
+.add-select {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-prompt {
+    align-items: center;
+    justify-content: center;
+}
+
+.add-btns {
+    margin: 10px 10px;
+}

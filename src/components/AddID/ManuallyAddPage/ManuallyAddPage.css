@@ -1,0 +1,50 @@
+.manual-form {
+    font-size: clamp(20px, 1.5vw, 25px);
+    max-width: 600px;
+    margin: auto;
+    display: block;
+    color: grey;
+}
+
+.form-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.form-errors {
+    color: #d21404;
+    font-size: 15px;
+}
+
+label {
+    margin-right: 10px;
+    flex: 1;
+    color: white;
+}
+
+input,
+select {
+    border: none;
+    border-radius: 5px;
+    font-family: latoBold;
+    flex: 2;
+    font-size: 15px;
+    padding: 10px;
+    color: grey;
+    text-transform: uppercase
+}
+
+.form-buttons {
+    justify-content: end;
+}
+
+.submit {
+    flex: .25 0 0;
+    margin-right: 0px !important;
+}
+
+::placeholder {
+    opacity: 0.5;
+}

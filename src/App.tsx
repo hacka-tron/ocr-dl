@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+import ViewPage from './components/ViewID/ViewPage';
+import AddPage from './components/AddID/AddPage/AddPage';
+import ManuallyAddPage from './components/AddID/ManuallyAddPage/ManuallyAddPage';
+import ScanPage from './components/AddID/ScanPage';
+import { LicensesContext } from './LicensesContext';
 import './App.css';
+import { License, licenseLS } from './License.d';
+import { useState } from 'react';
 
 function App() {
+  const licenseStr = localStorage.getItem(licenseLS);
+  let licensesInitVal: License[] = licenseStr ? JSON.parse(licenseStr) : [];
+  const [licenses, setLicenses] = useState(licensesInitVal);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <LicensesContext.Provider value = {{licenses, setLicenses}}>
+      <div className='main'>
+        <Routes>
+          <Route path="/" element={<ViewPage />} />
+          <Route path="/add" element={<AddPage />} />
+          <Route path="/add/manual" element={<ManuallyAddPage />} />
+          <Route path="/add/scan" element={<ScanPage />} />
+        </Routes>
+      </div>
+      </LicensesContext.Provider>
+    </BrowserRouter>
+
   );
 }
 
