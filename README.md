@@ -17,7 +17,7 @@ The app has numerous helpful features like:
 
 * ~~Create app.~~
 * ~~Add general styling throughout.~~
-* ~~Created all pages and add routing between them. ~~
+* ~~Created all pages and add routing between them.~~
 * ~~Added form for manually entering licenses.~~
 * ~~Added persistence and context to allow for storing data and moving it between components.~~
 * Add view page to view licenses in a card and grid like manner.
