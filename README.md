@@ -15,7 +15,7 @@ The app has numerous helpful features like:
 
 ## Roadmap
 
-* ~~Create app.~~
+* ~~Create REACT app.~~
 * ~~Add general styling throughout.~~
 * ~~Created all pages and add routing between them.~~
 * ~~Added form for manually entering licenses.~~
